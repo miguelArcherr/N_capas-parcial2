@@ -39,15 +39,35 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: localhost:8190/libro/ver
+  - url: localhost:8190/libro
     name: Ver Todos Libros
     meta:
       id: req_31f1ef8afff94784a74d54fd4ff763e4
       created: 1748916473169
-      modified: 1748916523088
+      modified: 1748917138272
       isPrivate: false
       sortKey: -1748916473169
     method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:8190/libro/eliminar/98b1396c-d0bc-4342-b371-44a00f0a2c0d
+    name: eliminar libro
+    meta:
+      id: req_ea6a79abbdaa4bfb91b111e97f270883
+      created: 1748916909722
+      modified: 1748916993534
+      isPrivate: false
+      sortKey: -1748916909722
+    method: DELETE
     headers:
       - name: User-Agent
         value: insomnia/11.1.0

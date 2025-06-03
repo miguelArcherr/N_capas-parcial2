@@ -28,10 +28,11 @@ public class ControladorLibro {
         }
     }
 
-    @GetMapping("/ver")
-    public ResponseEntity<List<Libro>> verTodosLirbos(){
+    @GetMapping("")
+    public ResponseEntity<List<Libro>> verTodosLirbos(@RequestParam("autor") String a){
         return ResponseEntity.ok(serviciosLibro.verTodosLibros());
     }
+
     @DeleteMapping("/eliminar/{id}")
     public ResponseEntity<Void> eliminarLibro(@PathVariable("id") String id){
         try {
